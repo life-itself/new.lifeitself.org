@@ -12,6 +12,28 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
+/* Fonts */
+
+
+@font-face {
+    font-family: "Restora";
+    src: url("/assets/fonts/Restora.ttf");
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Restora";
+    src: url("/assets/fonts/RestoraBold.ttf");
+    font-style: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Restora";
+    src: url("/assets/fonts/RestoraExtraLight.otf");
+    font-style: light;
+    font-display: swap;
+  }
+
 /* Base components */
 @import "vars.css";
 @import "components/global.css";
