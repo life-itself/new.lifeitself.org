@@ -16,7 +16,7 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
+{{!-- <header id="gh-head" class="gh-head">
     <nav class="gh-head-inner gh-container">
 
         <div class="gh-head-brand">
@@ -49,16 +49,22 @@
             </div>
         </div>
     </nav>
-</header>
+</header> --}}
+<div class="min-h-screen bg-background dark:bg-background-dark">
+{{> header}}
 
-<main class="gh-main">
+{{{body}}}
 
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+{{> footer}}
 
-</main>
+</div>
 
-<footer class="gh-foot">
+
+{{!-- <main class="gh-main">
+
+</main> --}}
+
+{{!-- <footer class="gh-foot">
     <div class="gh-container">
         <div class="gh-foot-menu">
             {{navigation type="secondary"}}
@@ -67,7 +73,7 @@
             Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
-</footer>
+</footer> --}}
 
 </div>
 

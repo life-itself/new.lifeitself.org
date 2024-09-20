@@ -1,0 +1,45 @@
+<section class="max-w-7xl mx-auto mt-24 mb-36 px-6 lg:px-8 flex flex-col items-center gap-y-12 text-primary">
+    <h2 class="max-w-2xl mx-auto text-center text-3xl font-headings font-bold tracking-tight text-primary sm:text-4xl">
+        What We're Up To</h2>
+    <p class="max-w-2xl mx-auto -mt-6 text-center text-lg text-primary leading-8">Read about some of our major
+        initiatives.</p>
+
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+        <div class="grid grid-cols-1 gap-x-10 gap-y-20 content-stretch lg:grid-cols-3">
+            {{#get "posts" filter="tag:project" limit="3"}}
+            {{#foreach posts}}
+                <div class="group relative flex flex-col items-start gap-y-3 m-0 p-0">
+                    <div role="heading" class="text-base font-semibold text-primary">
+                        
+                        <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
+
+                        <a href="{{url}}"
+                            class="flex flex-col gap-y-3 transition font-medium text-primary group-hover:text-secondary">
+
+                            <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"> </span>
+
+                            {{#if feature_image}}
+                            <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w,
+                                {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+                                sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
+                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                                class="z-10 w-full mb-2 aspect-video object-cover object-left m-0 rounded-lg shadow-sm" />
+                            {{/if}}
+
+                            <span class="relative z-10">
+                                {{title}}
+                            </span>
+                        </a>
+                    </div>
+
+                    <p class="relative z-10 text-sm text-primary/80 line-clamp-3">
+                        {{excerpt}}
+                    </p>
+                </div>
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+
+    <a href="/initiatives">See More Initiatives&nbsp;<span aria-hidden="true">&rarr;</span></a>
+</section>
