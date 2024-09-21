@@ -1,0 +1,15 @@
+{{#if isSecondary}}
+    {{#foreach navigation}}
+        <a class="inline-flex items-center mx-4 px-1 pt-1 font-regular hover:text-slate-300 no-underline" href="{{url absolute="true"}}">{{label}}</a>
+    {{/foreach}}
+{{else}}
+    {{#foreach navigation}}
+        <div class="relative" data-headlessui-state="">
+            <button id="headlessui-menu-button-:r1:" type="button" aria-haspopup="true" aria-expanded="false"
+                data-headlessui-state=""><a
+                    class="text-slate-500 inline-flex items-center mr-2 px-1 pt-1 text-sm font-medium hover:text-slate-600"
+                    href="{{url absolute="true"}}">{{label}}</a>
+            </button>
+        </div>
+    {{/foreach}}
+{{/if}}
